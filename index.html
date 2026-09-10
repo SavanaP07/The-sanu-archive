@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Sanu ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #08080b;
+      --card: #111116;
+      --text: #f5f5f5;
+      --muted: #96969f;
+      --line: rgba(255,255,255,0.1);
+      --accent: #ff6685;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(255,70,110,0.10), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(120,80,255,0.07), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      overflow-x: hidden;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .screen {
+      min-height: 100vh;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 28px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .screen.active {
+      display: flex;
+      animation: fadeIn 0.7s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ---------- COMMON ---------- */
+
+    .content {
+      width: 100%;
+      max-width: 850px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .small-label {
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .main-title {
+      font-size: clamp(48px, 13vw, 105px);
+      line-height: 0.95;
+      letter-spacing: -5px;
+      font-weight: 700;
+    }
+
+    .serif {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+    }
+
+    .description {
+      max-width: 520px;
+      margin: 25px auto 35px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .btn {
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.05);
+      color: white;
+      padding: 15px 22px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: white;
+      color: #08080b;
+      border-color: white;
+    }
+
+    .btn.primary {
+      background: white;
+      color: #08080b;
+      border-color: white;
+      font-weight: 600;
+    }
+
+    .btn.primary:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    .back {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      color: var(--muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 12px;
+      letter-spacing: 1px;
+      z-index: 5;
+    }
+
+    .back:hover {
+      color: white;
+    }
+
+    /* ---------- OPENING ---------- */
+
+    #opening .content {
+      max-width: 720px;
+    }
+
+    .opening-note {
+      max-width: 500px;
+      margin: 0 auto 38px;
+      color: #c4c4ca;
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-size: clamp(17px, 4vw, 23px);
+      line-height: 1.7;
+    }
+
+    .opening-note span {
+      color: white;
+    }
+
+    .name {
+      font-size: clamp(60px, 17vw, 145px);
+      font-weight: 700;
+      letter-spacing: -7px;
+      line-height: 0.9;
+    }
+
+    .created {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    .for-sanu {
+      margin-top: 14px;
+      color: white;
+      font-size: clamp(25px, 7vw, 48px);
+      font-weight: 600;
+      letter-spacing: -1px;
+    }
+
+    .for-sanu span {
+      color: var(--accent);
+    }
+
+    /* ---------- READY
